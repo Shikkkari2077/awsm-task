@@ -18,9 +18,9 @@
     overflow-y: scroll;
     height: 500px;
 }
-.eventList::-webkit-scrollbar{
-    display: none;
-}
+/* .eventList::-webkit-scrollbar{
+    display: block;
+} */
 .leftSide h1{
     font-size: 23px;
     margin: 0;
@@ -53,6 +53,7 @@
     color: white;
 }
 .rightSide{
+    overflow: hidden;
     background: white;
     border: 1px solid gray;
 }
@@ -72,10 +73,28 @@
     align-items: center;
     background: white;
     padding: 0px 10px;
-    position: relative;
     font-size: 15px;
     font-weight: 700;
-    top: 16px;
+    top: 14px;
+    left: 5px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    cursor: pointer;
+}
+.ASpan{
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    margin-right: 10px;
+    justify-content: space-between;
+    width: 140px;
+    height: 30px;
+    align-items: center;
+    background: rgb(100, 198, 236);
+    padding: 0px 10px;
+    font-size: 15px;
+    font-weight: 700;
+    top: 14px;
     left: 5px;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
@@ -84,30 +103,30 @@
 .notActive{
     display: none;
 }
-.rightSide .Span p{
+.rightSide .rightTAB p{
     position: relative;
     top: -4px;
     right:-4px;
     margin: 0;
-    color: gray;
+    color: black;
     padding-bottom:5px ;
     margin-left: 5px;
     font-size: 16px;
+    cursor: pointer;
 }
-.rightSide span p:hover{
+.rightSide .rightTAB p:hover{
     color: black;
 }
 .tabData{
+    padding: 14px;
     width: 97%;
-    margin: 10px;
-    border: 1px solid gray;
-    background: white;
+    background: rgb(100, 198, 236);
     height: 472px;
     overflow-y: scroll;
 }
-.tabData::-webkit-scrollbar{
+/* .tabData::-webkit-scrollbar{
     display: none;
-}
+} */
 .tabData th{
     text-align: left;
     font-size: 13px;
@@ -115,4 +134,7 @@
 .tabData table {
     border-bottom: grey 1px solid;
     width: 100%;
+}
+.tabData h1{
+    text-align: center;
 }
